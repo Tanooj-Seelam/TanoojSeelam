@@ -1819,12 +1819,12 @@
             <form action=""  id="contact-form" class="form" target="_blank" data-form>
 
               <div class="input-wrapper">
-                <input type="text" name="entry.1325375650" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="text" id="full_name" name="entry.1325375650" class="form-input" placeholder="Full name" required data-form-input>
 
-                <input type="email" name="entry.45159176" class="form-input" placeholder="Email address" required data-form-input>
+                <input type="email" id="email_address" name="entry.45159176" class="form-input" placeholder="Email address" required data-form-input>
               </div>
 
-              <textarea name="entry.2104378170" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <textarea id="message" name="entry.2104378170" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
               <button class="form-btn" type="submit">
                 <ion-icon name="paper-plane"></ion-icon>
@@ -1855,10 +1855,10 @@
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
 
-      // Collect form data
-      const fullName = this.full_name.value;
-      const emailAddress = this.email_address.value;
-      const message = this.message.value;
+    // Collect form data
+    const fullName = document.getElementById('full_name').value;
+    const emailAddress = document.getElementById('email_address').value;
+    const message = document.getElementById('message').value;
 
       // Show loader
       document.querySelector('.loading-container').style.display = 'block';

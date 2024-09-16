@@ -348,6 +348,36 @@ article.active {
   z-index: -1;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    max-height: 200px; /* Smaller height on mobile */
+    overflow-y: auto; /* Allow scrolling */
+    padding: 10px;
+  }
+
+  .sidebar.active {
+    max-height: 100%; /* Expand the sidebar on click */
+  }
+
+  .sidebar-info {
+    flex-direction: column; /* Stack info vertically */
+    text-align: center;
+  }
+
+  .avatar-box img {
+    width: 100px; /* Smaller avatar size on mobile */
+    height: 100px;
+  }
+
+  .info-content .name {
+    font-size: var(--fs-6); /* Adjust font size for mobile */
+  }
+
+  .info-content .title {
+    font-size: var(--fs-8);
+  }
+}
+
 /*-----------------------------------*\
   #BODY
 \*-----------------------------------*/
